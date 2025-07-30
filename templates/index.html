@@ -1,0 +1,255 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Roadmap Genie</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+  </head>
+  <body class="antialiased">
+    <div class="flex h-screen bg-gray-900">
+      <!-- Sidebar -->
+      <aside
+        class="fixed top-0 left-0 h-full w-64 bg-gray-800 text-white flex flex-col z-40"
+      >
+        <div
+          class="flex items-center justify-center h-20 border-b border-gray-700"
+        >
+          <div class="flex items-center space-x-2">
+            <span class="material-icons text-purple-400 text-3xl"
+              >auto_awesome</span
+            >
+            <span class="text-xl font-bold">Roadmap Genie</span>
+          </div>
+        </div>
+        <nav class="flex-1 px-4 py-6 space-y-2">
+          <a class="sidebar-link active" href="#">
+            <span class="material-icons mr-3">home</span>
+            <span>Home</span>
+          </a>
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">add_road</span>
+            <span>Generate Roadmap</span>
+          </a>
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">dashboard</span>
+            <span>Progress Dashboard</span>
+          </a>
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">quiz</span>
+            <span>Skill Assessment</span>
+          </a>
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">group_add</span>
+            <span>Find a Mentor</span>
+          </a>
+        </nav>
+        <div class="px-4 py-6 border-t border-gray-700">
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">settings</span>
+            <span>Settings</span>
+          </a>
+          <a class="sidebar-link" href="#">
+            <span class="material-icons mr-3">notifications</span>
+            <span>Notifications</span>
+          </a>
+        </div>
+        <div class="px-4 py-4 border-t border-gray-700">
+          <div class="flex items-center">
+            <img
+              alt="User avatar"
+              class="h-10 w-10 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxvMv6YHnKdODQEDkb3AXTrG3iyGI9K9WrR961qIIv_1OoILaTxdi9p25iaXIQ-FgKKPpGlMfNgehN6znAsFfQnCaU1htTLP8lwOrplvD0nt_bOqm3Tf7F2XvzbmbGouCwISf-t3kkqhrL51_lutFiXHl14X2Kbjv-jtnBDfAN38SXNp3Qp47tcxDm2pB87hFraL6YJ9Q3yUzBE-Dys3CWt3uZi3eqaMhDbx0dCWeDKP5_BvxHFtdNTl22m206kMLweLAwvV30fco"
+            />
+            <div class="ml-3">
+              <p class="text-sm font-semibold">Alex Johnson</p>
+              <p class="text-xs text-gray-400">View Profile</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Overlay -->
+      <div class="sidebar-overlay"></div>
+
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col overflow-hidden ml-64 main-content">
+        <header
+          class="fixed top-0 left-64 right-0 z-30 bg-gray-900/70 backdrop-blur-lg border-b border-gray-800"
+        >
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+              <div class="flex items-center">
+                <button
+                  id="menuButton"
+                  class="mr-4 text-gray-400 hover:text-white hidden"
+                >
+                  <span class="material-icons">menu</span>
+                </button>
+                <div>
+                  <h2 class="text-2xl font-bold text-white">
+                    Welcome Back, Alex!
+                  </h2>
+                  <p class="text-sm text-gray-400">
+                    Let's continue your learning journey.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-6">
+                <button class="relative text-gray-400 hover:text-white">
+                  <span class="material-icons">notifications</span>
+                  <span
+                    class="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full border-2 border-gray-900"
+                  ></span>
+                </button>
+                <div class="relative">
+                  <button class="flex items-center space-x-2">
+                    <img
+                      alt="User avatar"
+                      class="h-10 w-10 rounded-full object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxvMv6YHnKdODQEDkb3AXTrG3iyGI9K9WrR961qIIv_1OoILaTxdi9p25iaXIQ-FgKKPpGlMfNgehN6znAsFfQnCaU1htTLP8lwOrplvD0nt_bOqm3Tf7F2XvzbmbGouCwISf-t3kkqhrL51_lutFiXHl14X2Kbjv-jtnBDfAN38SXNp3Qp47tcxDm2pB87hFraL6YJ9Q3yUzBE-Dys3CWt3uZi3eqaMhDbx0dCWeDKP5_BvxHFtdNTl22m206kMLweLAwvV30fco"
+                    />
+                    <span class="material-icons text-gray-400"
+                      >expand_more</span
+                    >
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main
+          class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-900 pt-20"
+        >
+          <section
+            class="relative text-center py-24 sm:py-32 px-4 sm:px-6 lg:px-8"
+          >
+            <div
+              class="absolute inset-0 bg-grid-gray-700/[0.2] [mask-image:linear-gradient(to_bottom,white_5%,transparent_90%)]"
+            >
+              <img src="{% static 'ASSET/BgImg.jpg' %}" alt="" />
+            </div>
+            <div class="relative container mx-auto">
+              <h1
+                class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4"
+              >
+                Craft Your <span class="gradient-text">Success Story</span>
+              </h1>
+              <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
+                Roadmap Genie provides you with all the tools for success.
+                Generate personalized roadmaps, track your progress, assess your
+                skills, and connect with mentors to unlock your full potential.
+              </p>
+              <div class="mt-10 flex justify-center">
+                <a
+                  class="bg-purple-600 text-white font-semibold py-3 px-8 rounded-full text-lg hover:bg-purple-700 transition duration-300 transform hover:scale-105 shadow-lg"
+                  href="#"
+                >
+                  Get Started Now
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="px-4 sm:px-6 lg:px-8 pb-20">
+            <div class="container mx-auto">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6"
+              >
+                <a class="card p-6 flex flex-col items-start" href="#">
+                  <div class="flex items-center justify-between w-full mb-4">
+                    <h3 class="text-xl font-semibold text-white">
+                      Generate New Roadmap
+                    </h3>
+                    <div class="bg-purple-500 p-3 rounded-full">
+                      <span class="material-icons text-white text-3xl"
+                        >add_road</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-gray-400">
+                    Create AI-powered learning paths tailored to your goals.
+                  </p>
+                </a>
+
+                <a class="card p-6 flex flex-col items-start" href="#">
+                  <div class="flex items-center justify-between w-full mb-4">
+                    <h3 class="text-xl font-semibold text-white">
+                      Skill Assessment
+                    </h3>
+                    <div class="bg-blue-500 p-3 rounded-full">
+                      <span class="material-icons text-white text-3xl"
+                        >quiz</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-gray-400">
+                    Identify strengths and weaknesses for better
+                    personalization.
+                  </p>
+                </a>
+                <a class="card p-6 flex flex-col items-start" href="#">
+                  <div class="flex items-center justify-between w-full mb-4">
+                    <h3 class="text-xl font-semibold text-white">
+                      Find a Mentor
+                    </h3>
+                    <div class="bg-green-500 p-3 rounded-full">
+                      <span class="material-icons text-white text-3xl"
+                        >group_add</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-gray-400">
+                    Connect with experienced professionals to guide you.
+                  </p>
+                </a>
+                <a class="card p-6 flex flex-col items-start" href="#">
+                  <div class="flex items-center justify-between w-full mb-4">
+                    <h3 class="text-xl font-semibold text-white">
+                      User Profile
+                    </h3>
+                    <div class="bg-yellow-500 p-3 rounded-full">
+                      <span class="material-icons text-white text-3xl"
+                        >person</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-gray-400">
+                    Manage your public profile and showcase achievements.
+                  </p>
+                </a>
+                <a class="card p-6 flex flex-col items-start" href="#">
+                  <div class="flex items-center justify-between w-full mb-4">
+                    <h3 class="text-xl font-semibold text-white">
+                      Account Settings
+                    </h3>
+                    <div class="bg-indigo-500 p-3 rounded-full">
+                      <span class="material-icons text-white text-3xl"
+                        >settings</span
+                      >
+                    </div>
+                  </div>
+                  <p class="text-gray-400">
+                    Update your account details and preferences.
+                  </p>
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="{% static 'JS/script.js' %}"></script>
+  </body>
+</html>
