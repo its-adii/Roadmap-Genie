@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Roadmap Genie - User Profile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}" />
+    <script defer src="{% static 'JS/script.js' %}"></script>
+  </head>
+  <body class="bg-custom-dark text-white">
+    <div class="flex h-screen">
+      <aside class="w-64 bg-custom-nav flex flex-col justify-between">
+        <div>
+          <div class="p-6 flex items-center space-x-3">
+            <span class="material-icons text-white text-3xl">auto_awesome</span>
+            <h1 class="text-xl font-bold">Roadmap Genie</h1>
+          </div>
+          <nav class="mt-6">
+            <ul>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">home</span>
+                <span>Home</span>
+              </li>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">trending_up</span>
+                <span>Generate Roadmap</span>
+              </li>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">dashboard</span>
+                <span>Progress Dashboard</span>
+              </li>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">assessment</span>
+                <span>Skill Assessment</span>
+              </li>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">person_search</span>
+                <span>Find a Mentor</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <nav class="mb-6">
+            <ul>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+              </li>
+              <li
+                class="px-6 py-3 flex items-center space-x-3 text-gray-400 hover:bg-gray-700/50 cursor-pointer"
+              >
+                <span class="material-icons">notifications</span>
+                <span>Notifications</span>
+              </li>
+            </ul>
+          </nav>
+          <div
+            class="p-4 border-t border-gray-700 flex items-center space-x-3 bg-custom-dark"
+          >
+            <img
+              alt="Alex Johnson's profile picture"
+              class="h-10 w-10 rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoHw6773isBtDVIGPxw9ww0z8b53Ee2YD9grFuYM_Rs-SfI95DCLJeyUDXBj9devub4Z_E24GDFuzLxPI8i26rqA-1aZi13SVHhm7xNNfBjRhtUEibWR7gX7UwNT9PEJNGjERbUfZI2e87JPZ2uuMuCGXwE8BiBQibQGU7hURcYWtBlsXvloO6TPB6RCPCP_FYDz1n_mxPTci-ESsGOuyI4jQoguG4fyDNMGCBJxnQNaLb75x45qVf3Kg6GqoKEHFABYTmwHwmEK4"
+            />
+            <div>
+              <p class="font-semibold">Alex Johnson</p>
+              <p class="text-sm text-gray-400">View Profile</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="flex-1 flex flex-col overflow-hidden">
+        <header
+          class="bg-custom-dark p-6 flex justify-between items-center border-b border-gray-700"
+        >
+          <div>
+            <h2 class="text-2xl font-bold">User Profile</h2>
+            <p class="text-gray-400">
+              Manage your profile and account settings.
+            </p>
+          </div>
+          <div class="flex items-center space-x-4">
+            <button class="p-2 rounded-full hover:bg-gray-700/50">
+              <span class="material-icons">search</span>
+            </button>
+            <button class="p-2 rounded-full hover:bg-gray-700/50">
+              <span class="material-icons">notifications</span>
+            </button>
+            <span class="material-icons text-gray-400 text-3xl">more_vert</span>
+          </div>
+        </header>
+        <div
+          class="flex-1 overflow-y-auto p-8 scrollbar-hide"
+          style="background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('{% static "images/BgImg.jpg" %}'); background-size: cover; background-position: center;"
+        >
+             <div class="max-w-4xl mx-auto">
+            <div class="bg-custom-card rounded-lg p-8 shadow-lg">
+              <div
+                class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8"
+              >
+                <div class="relative">
+                  <img
+                    alt="Alex Johnson's profile picture large"
+                    class="h-32 w-32 rounded-full ring-4 ring-custom-purple"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Wi8W6mOUvMpjx-vRXdx3vnrgFLgZ1Thb42YwexWBgkyURO-7tQf-45NBwQju-yozDw9-AiLDo-MKT59gBjWcWsbAA6UGRgn_GXnHWKORQMGtFPZBSiIht5fMtqcg3K3CnYLQMBbVWJ5A2cM4LvWyGrot_xS1AUFQpCgjeR_K77ERd07F-M-UAUzAoBTmiKr7Ingrh9r7lViXe9_PiwA2v82CvHRSc7kfJ4Uy8BYNqzBN8oSDoD-FuLA87dLRt5psFcV1_baz2e4"
+                  />
+                  <button
+                    class="absolute bottom-1 right-1 bg-custom-purple text-white p-2 rounded-full hover:bg-purple-500"
+                  >
+                    <span class="material-icons text-base">edit</span>
+                  </button>
+                </div>
+                <div class="flex-1 text-center md:text-left">
+                  <h3 class="text-3xl font-bold">Alex Johnson</h3>
+                  <p class="text-gray-400 mt-1">alex.j@example.com</p>
+                  <p class="mt-4 text-gray-300">
+                    Passionate about full-stack development and AI. Eager to
+                    learn and grow in the tech industry. Let's connect and build
+                    amazing things together!
+                  </p>
+                  <div
+                    class="mt-6 flex justify-center md:justify-start space-x-4"
+                  >
+                    <a class="text-gray-400 hover:text-white" href="#"
+                      ><span class="material-icons">link</span></a
+                    >
+                    <a class="text-gray-400 hover:text-white" href="#"
+                      ><span class="material-icons">code</span></a
+                    >
+                    <a class="text-gray-400 hover:text-white" href="#"
+                      ><span class="material-icons">group</span></a
+                    >
+                  </div>
+                </div>
+                <div>
+                  <button
+                    class="bg-custom-purple text-white font-semibold py-2 px-6 rounded-lg hover:bg-purple-500 transition duration-300"
+                  >
+                    Edit Profile
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-custom-card rounded-lg p-6 shadow-lg">
+                <h4 class="text-xl font-semibold mb-4">My Roadmaps</h4>
+                <ul class="space-y-4">
+                  <li
+                    class="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <div>
+                      <p class="font-medium">Full-Stack Developer Path</p>
+                      <div class="w-full bg-gray-600 rounded-full h-2.5 mt-2">
+                        <div
+                          class="bg-custom-purple h-2.5 rounded-full"
+                          style="width: 75%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="text-custom-purple font-semibold">75%</span>
+                  </li>
+                  <li
+                    class="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <div>
+                      <p class="font-medium">AI &amp; Machine Learning</p>
+                      <div class="w-full bg-gray-600 rounded-full h-2.5 mt-2">
+                        <div
+                          class="bg-custom-purple h-2.5 rounded-full"
+                          style="width: 40%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="text-custom-purple font-semibold">40%</span>
+                  </li>
+                  <li
+                    class="flex items-center justify-between p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <div>
+                      <p class="font-medium">DevOps Essentials</p>
+                      <div class="w-full bg-gray-600 rounded-full h-2.5 mt-2">
+                        <div
+                          class="bg-custom-purple h-2.5 rounded-full"
+                          style="width: 15%"
+                        ></div>
+                      </div>
+                    </div>
+                    <span class="text-custom-purple font-semibold">15%</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-custom-card rounded-lg p-6 shadow-lg">
+                <h4 class="text-xl font-semibold mb-4">Skill Assessments</h4>
+                <ul class="space-y-4">
+                  <li
+                    class="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <span class="material-icons text-green-400"
+                      >check_circle</span
+                    >
+                    <div>
+                      <p class="font-medium">JavaScript Fundamentals</p>
+                      <p class="text-sm text-gray-400">
+                        Completed on 15 May 2024
+                      </p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <span class="material-icons text-yellow-400"
+                      >hourglass_top</span
+                    >
+                    <div>
+                      <p class="font-medium">React Intermediate</p>
+                      <p class="text-sm text-gray-400">In Progress</p>
+                    </div>
+                  </li>
+                  <li
+                    class="flex items-center space-x-4 p-3 bg-gray-700/30 rounded-lg"
+                  >
+                    <button
+                      class="bg-custom-purple text-white py-1 px-3 rounded-md text-sm font-semibold hover:bg-purple-500"
+                    >
+                      Start
+                    </button>
+                    <div>
+                      <p class="font-medium">Node.js Basics</p>
+                      <p class="text-sm text-gray-400">Not Started</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-8 bg-custom-card rounded-lg p-8 shadow-lg">
+              <h4 class="text-xl font-semibold mb-6">Account Settings</h4>
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-gray-300"
+                      for="fullName"
+                      >Full Name</label
+                    >
+                    <input
+                      class="mt-1 block w-full bg-gray-700/50 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-custom-purple focus:border-custom-purple"
+                      id="fullName"
+                      type="text"
+                      value="Alex Johnson"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-gray-300"
+                      for="email"
+                      >Email Address</label
+                    >
+                    <input
+                      class="mt-1 block w-full bg-gray-700/50 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-custom-purple focus:border-custom-purple"
+                      id="email"
+                      type="email"
+                      value="alex.j@example.com"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label
+                    class="block text-sm font-medium text-gray-300"
+                    for="bio"
+                    >Bio</label
+                  >
+                  <textarea
+                    class="mt-1 block w-full bg-gray-700/50 border border-gray-600 rounded-md shadow-sm py-2 px-3 text-white focus:outline-none focus:ring-custom-purple focus:border-custom-purple"
+                    id="bio"
+                    rows="3"
+                  >
+Passionate about full-stack development and AI. Eager to learn and grow in the tech industry. Let's connect and build amazing things together!</textarea
+                  >
+                </div>
+                <div class="flex justify-end space-x-4">
+                  <button
+                    class="bg-gray-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-gray-500 transition duration-300"
+                    type="button"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    class="bg-custom-purple text-white font-semibold py-2 px-6 rounded-lg hover:bg-purple-500 transition duration-300"
+                    type="submit"
+                  >
+                    Save Changes
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

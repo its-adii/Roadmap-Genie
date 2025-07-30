@@ -136,3 +136,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+
+// ---------------------- profile page--------------------------
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("User Profile Page Loaded");
+
+  // Example: Hook up edit button if needed
+  const editButtons = document.querySelectorAll("button");
+  editButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      console.log("Button clicked:", btn.innerText.trim());
+    });
+  });
+});
