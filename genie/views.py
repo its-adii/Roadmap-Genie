@@ -4,7 +4,10 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'index.html', {
+        'username': request.user.username,
+        'full_name': request.user.get_full_name(),
+    })
 
 def signup_view(request):
     if request.method == 'POST':
